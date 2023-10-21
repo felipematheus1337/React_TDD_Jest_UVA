@@ -1,6 +1,6 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 import { useState } from "react";
 import "./App.css";
-
 
 export function Form() {
 
@@ -9,23 +9,17 @@ export function Form() {
 
     return (
         <div className="container">
-             <form className="form">
+             <form className="form" role="form">
+
                 <label htmlFor="nome">Nome da Escola:</label>
-                <input 
-                name="nome"
-                onChange={(e) => setNome(e.target.value)}
-                />
+                <input name="nome" placeholder="Nome" onChange={(e) => setNome(e.target.value)}/>
 
                 <label htmlFor="cidade">Cidade:</label>
-                <input
-                 name="cidade"
-                 onChange={(e) => setCidade(e.target.value)}
-                 />
+                <input name="cidade" placeholder="Cidade" onChange={(e) => setCidade(e.target.value)}/>
 
-                <button onClick={(e) => {
-                    e.preventDefault();
-                    alert(`Escola ${nome} da cidade: ${cidade} cadastrada com sucesso!`)
-                }} type="submit">Criar</button>
+                <button type="submit" onClick={(e) => { e.preventDefault(); alert(`Escola ${nome} da cidade: ${cidade} cadastrada com sucesso!`)}}>
+                  Criar
+                </button>
              </form>
         </div>
       );
