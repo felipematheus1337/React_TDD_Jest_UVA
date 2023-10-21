@@ -21,7 +21,7 @@ test('Renderização', () => {
    expect(form?.childElementCount).toBe(5);
 
   expect(form).toContainElement(form!.querySelector('label[for="nome"]'));
-  expect(form).toContainElement(form!.querySelector('inpust[name="nome"]'));
+  expect(form).toContainElement(form!.querySelector('input[name="nome"]'));
   expect(form).toContainElement(form!.querySelector('label[for="cidade"]'));
   expect(form).toContainElement(form!.querySelector('input[name="cidade"]'));
   expect(form).toContainElement(form!.querySelector('button[type="submit"]'));
